@@ -1,1 +1,21 @@
-[]
+[
+    {
+        "id": "80fcb1b0.8d59a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "40665bdb.6e461c",
+        "type": "simple-queue",
+        "z": "80fcb1b0.8d59a",
+        "name": "",
+        "count": 4,
+        "x": 270,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    }
+]
