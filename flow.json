@@ -1,21 +1,2064 @@
 [
     {
-        "id": "80fcb1b0.8d59a",
+        "id": "57d6a2d8.031304",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "main",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "40665bdb.6e461c",
-        "type": "simple-queue",
-        "z": "80fcb1b0.8d59a",
+        "id": "7bb680d6.d6c6c",
+        "type": "tab",
+        "label": "get image ",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "323f1b26.62b204",
+        "type": "tab",
+        "label": "process number ",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d91e6d3b.0f146",
+        "type": "subflow",
+        "name": "alert to user",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 20,
+                "y": 60,
+                "wires": [
+                    {
+                        "id": "85334322.b60e1"
+                    },
+                    {
+                        "id": "1fa539e1.cf1f16"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "6d72e121.ff3af",
+        "type": "subflow",
+        "name": "display on chart",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 120,
+                "wires": [
+                    {
+                        "id": "7f517083.0972b"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "552d973b.36d1e8",
+        "type": "subflow",
+        "name": "img to text to num",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "e3c3d1aa.ad1538"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 820,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "3296bed0.504d6a",
+                        "port": 2
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "4b88ec7e.99ce7c",
+        "type": "subflow",
+        "name": "prepare image for ocr",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 60,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "a62a0330.9046a"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 760,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "c63d19c2.c8286",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "6d74aab0.22c664",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a8577957.943fc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "5bce848c.49841c",
+        "type": "ui_group",
+        "name": "spindle load",
+        "tab": "6d74aab0.22c664",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e16e06ca.f38438",
+        "type": "ui_group",
+        "name": "Frame Statistics",
+        "tab": "7af2d9c8.0a9148",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "675036dd.603328",
+        "type": "ui_group",
+        "name": "Frame Grab",
+        "tab": "7af2d9c8.0a9148",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "7af2d9c8.0a9148",
+        "type": "ui_tab",
+        "name": "RTSP",
+        "icon": "dashboard",
+        "order": 13,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "89d013d1.7acd18",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "avishay"
+    },
+    {
+        "id": "f080d063.b82dd8",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "7af2d9c8.0a9148",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "11af806b.6653b",
+        "type": "ui_group",
+        "name": "current image",
+        "tab": "6d74aab0.22c664",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "dae08192.c32e68",
+        "type": "function",
+        "z": "552d973b.36d1e8",
+        "name": "compose tesseract command",
+        "func": "msg.payload = ' --dpi 300 --psm 6 ' + msg.filename +' stdout' ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 80,
+        "wires": [
+            [
+                "f8f72a4.bd11dd8"
+            ]
+        ]
+    },
+    {
+        "id": "d7e45c46.94ce8",
+        "type": "jimp-image",
+        "z": "4b88ec7e.99ce7c",
         "name": "",
-        "count": 4,
-        "x": 270,
-        "y": 60,
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "buf",
+        "parameter1": "430",
+        "parameter1Type": "num",
+        "parameter2": "90",
+        "parameter2Type": "num",
+        "parameter3": "155",
+        "parameter3Type": "num",
+        "parameter4": "60",
+        "parameter4Type": "num",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 4,
+        "jimpFunction": "crop",
+        "selectedJimpFunction": {
+            "name": "crop",
+            "fn": "crop",
+            "description": "crop to the given region",
+            "parameters": [
+                {
+                    "name": "x",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the x coordinate to crop form"
+                },
+                {
+                    "name": "y",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the y coordinate to crop form"
+                },
+                {
+                    "name": "w",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the width of the crop region"
+                },
+                {
+                    "name": "h",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the height of the crop region"
+                }
+            ]
+        },
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "c1f19eaa.bc148"
+            ]
+        ]
+    },
+    {
+        "id": "e3c3d1aa.ad1538",
+        "type": "function",
+        "z": "552d973b.36d1e8",
+        "name": "'Pictures/uriya/croped/' + filename + '.jpg'",
+        "func": "msg.filename = '/tmp/'+ Date.now() +'.jpg';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 80,
+        "wires": [
+            [
+                "2d99b790.645f1"
+            ]
+        ]
+    },
+    {
+        "id": "2d99b790.645f1",
+        "type": "file",
+        "z": "552d973b.36d1e8",
+        "name": "write file",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 560,
+        "y": 80,
+        "wires": [
+            [
+                "dae08192.c32e68"
+            ]
+        ]
+    },
+    {
+        "id": "980a647e.6c2768",
+        "type": "inject",
+        "z": "57d6a2d8.031304",
+        "name": "chop video",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1760,
+        "y": 40,
+        "wires": [
+            [
+                "b11bf419.60e8e8"
+            ]
+        ]
+    },
+    {
+        "id": "b11bf419.60e8e8",
+        "type": "exec",
+        "z": "57d6a2d8.031304",
+        "command": "ffmpeg -i /home/user/VID-20210427-WA0004.mp4 -vf \"fps=4\"  /home/user/Pictures/uriya/frames/test-%03d.jpg",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 2230,
+        "y": 40,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "586a2365.4d22e4",
+        "type": "inject",
+        "z": "57d6a2d8.031304",
+        "name": "delete files",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1760,
+        "y": 100,
+        "wires": [
+            [
+                "ac87a18c.50055"
+            ]
+        ]
+    },
+    {
+        "id": "ac87a18c.50055",
+        "type": "exec",
+        "z": "57d6a2d8.031304",
+        "command": " rm /home/user/Pictures/uriya/croped/*; rm /home/user/Pictures/uriya/frames/*",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 2130,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c63d19c2.c8286",
+        "type": "jimp-image",
+        "z": "4b88ec7e.99ce7c",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "buf",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "invert",
+        "selectedJimpFunction": {
+            "name": "invert",
+            "fn": "invert",
+            "description": "invert the image colours",
+            "parameters": []
+        },
+        "x": 630,
+        "y": 80,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "c1f19eaa.bc148",
+        "type": "jimp-image",
+        "z": "4b88ec7e.99ce7c",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "buf",
+        "parameter1": "280",
+        "parameter1Type": "num",
+        "parameter2": "180",
+        "parameter2Type": "num",
+        "parameter3": "Middle Centre",
+        "parameter3Type": "alignMode",
+        "parameter4": "RESIZE_BICUBIC",
+        "parameter4Type": "resizeMode",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 4,
+        "jimpFunction": "contain",
+        "selectedJimpFunction": {
+            "name": "contain",
+            "fn": "contain",
+            "description": "scale the image to the given width and height, some parts of the image may be letter boxed",
+            "parameters": [
+                {
+                    "name": "w",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the width to resize the image to"
+                },
+                {
+                    "name": "h",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the height to resize the image to"
+                },
+                {
+                    "name": "alignBits",
+                    "type": "alignMode",
+                    "required": false,
+                    "hint": "A bitmask for horizontal and vertical alignment. Jimp.HORIZONTAL_ALIGN_LEFT | Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.HORIZONTAL_ALIGN_RIGHT | Jimp.VERTICAL_ALIGN_TOP | Jimp.VERTICAL_ALIGN_MIDDLE | Jimp.VERTICAL_ALIGN_BOTTOM;"
+                },
+                {
+                    "name": "mode",
+                    "type": "resizeMode",
+                    "required": false,
+                    "hint": "A scaling method (e.g. Jimp.RESIZE_BEZIER)"
+                }
+            ]
+        },
+        "x": 340,
+        "y": 80,
+        "wires": [
+            [
+                "37b09a30.196986"
+            ]
+        ]
+    },
+    {
+        "id": "f8f72a4.bd11dd8",
+        "type": "exec",
+        "z": "552d973b.36d1e8",
+        "command": "tesseract",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "b5b8e603.3be3a"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b5b8e603.3be3a",
+        "type": "function",
+        "z": "552d973b.36d1e8",
+        "name": "buffer toString & remove newline",
+        "func": "var out2 = {payload :  msg.payload.toString() };\n\nmsg.payload = msg.payload.toString();\nmsg.payload = msg.payload.replace(/\\n/g,\" \").trim();\nmsg.payload = parseFloat(msg.payload);\nif (isNaN(msg.payload)) {\n    msg.payload = true;\n  }\n  \nreturn [msg,out2];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "3296bed0.504d6a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "37b09a30.196986",
+        "type": "jimp-image",
+        "z": "4b88ec7e.99ce7c",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "buf",
+        "parameter1": "380",
+        "parameter1Type": "num",
+        "parameter2": "180",
+        "parameter2Type": "num",
+        "parameter3": "Middle Centre",
+        "parameter3Type": "alignMode",
+        "parameter4": "RESIZE_BICUBIC",
+        "parameter4Type": "resizeMode",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 4,
+        "jimpFunction": "contain",
+        "selectedJimpFunction": {
+            "name": "contain",
+            "fn": "contain",
+            "description": "scale the image to the given width and height, some parts of the image may be letter boxed",
+            "parameters": [
+                {
+                    "name": "w",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the width to resize the image to"
+                },
+                {
+                    "name": "h",
+                    "type": "num",
+                    "required": true,
+                    "hint": "the height to resize the image to"
+                },
+                {
+                    "name": "alignBits",
+                    "type": "alignMode",
+                    "required": false,
+                    "hint": "A bitmask for horizontal and vertical alignment. Jimp.HORIZONTAL_ALIGN_LEFT | Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.HORIZONTAL_ALIGN_RIGHT | Jimp.VERTICAL_ALIGN_TOP | Jimp.VERTICAL_ALIGN_MIDDLE | Jimp.VERTICAL_ALIGN_BOTTOM;"
+                },
+                {
+                    "name": "mode",
+                    "type": "resizeMode",
+                    "required": false,
+                    "hint": "A scaling method (e.g. Jimp.RESIZE_BEZIER)"
+                }
+            ]
+        },
+        "x": 493.3333740234375,
+        "y": 80,
+        "wires": [
+            [
+                "c63d19c2.c8286"
+            ]
+        ]
+    },
+    {
+        "id": "7f517083.0972b",
+        "type": "ui_chart",
+        "z": "6d72e121.ff3af",
+        "name": "",
+        "group": "5bce848c.49841c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 190,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3296bed0.504d6a",
+        "type": "switch",
+        "z": "552d973b.36d1e8",
+        "name": "num only",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "null",
+                "vt": "num"
+            },
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 680,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f3b58fd5.e763d",
+        "type": "inject",
+        "z": "6d72e121.ff3af",
+        "name": "reset chart",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [
+                "7f517083.0972b"
+            ]
+        ]
+    },
+    {
+        "id": "3e2e3c7e.cdb8ec",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "d91e6d3b.0f146",
+        "name": "alert on Whatsapp",
+        "account": "89d013d1.7acd18",
+        "text": "payload",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 870,
+        "y": 60,
+        "wires": [
+            [
+                "12eba945.0565df"
+            ]
+        ]
+    },
+    {
+        "id": "85334322.b60e1",
+        "type": "switch",
+        "z": "d91e6d3b.0f146",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "SL_MAX_LOAD",
+                "vt": "global"
+            },
+            {
+                "t": "lte",
+                "v": "SL_MAX_LOAD",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "a23bc963.12c8f"
+            ],
+            [
+                "81c8eb82.8373"
+            ]
+        ]
+    },
+    {
+        "id": "13bac04f.d45d88",
+        "type": "inject",
+        "z": "d91e6d3b.0f146",
+        "name": "test SL load  = 10",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 100,
+        "y": 320,
+        "wires": [
+            [
+                "85334322.b60e1",
+                "1fa539e1.cf1f16"
+            ]
+        ]
+    },
+    {
+        "id": "1fa539e1.cf1f16",
+        "type": "debug",
+        "z": "d91e6d3b.0f146",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "24c56a6e.a801be",
+        "type": "function",
+        "z": "d91e6d3b.0f146",
+        "name": "format msg",
+        "func": "msg.payload = 'Spindle Load = ' + msg.payload ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 60,
+        "wires": [
+            [
+                "3e2e3c7e.cdb8ec",
+                "1fa539e1.cf1f16"
+            ]
+        ]
+    },
+    {
+        "id": "4db93e61.415e08",
+        "type": "subflow:4b88ec7e.99ce7c",
+        "z": "57d6a2d8.031304",
+        "name": "prepare image for ocr",
+        "env": [],
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "5c204382.3adafc"
+            ]
+        ]
+    },
+    {
+        "id": "a23bc963.12c8f",
+        "type": "function",
+        "z": "d91e6d3b.0f146",
+        "name": "check SL_MAX_LOAD_ON ",
+        "func": "if (global.SL_MAX_LOAD_ON == true ){\n    global.SL_MAX_LOAD_ALERT = true; \n} else{\n    global.SL_MAX_LOAD_ON = true;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 20,
+        "wires": [
+            [
+                "50fc8a39.d63354"
+            ]
+        ]
+    },
+    {
+        "id": "81c8eb82.8373",
+        "type": "change",
+        "z": "d91e6d3b.0f146",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SL_MAX_LOAD_ON",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12eba945.0565df",
+        "type": "change",
+        "z": "d91e6d3b.0f146",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SL_MAX_LOAD_ALERT",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "SL_MAX_LOAD_ON",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 180,
+        "wires": [
+            [
+                "1fa539e1.cf1f16"
+            ]
+        ]
+    },
+    {
+        "id": "50fc8a39.d63354",
+        "type": "switch",
+        "z": "d91e6d3b.0f146",
+        "name": "check SL_MAX_LOAD_ALERT",
+        "property": "SL_MAX_LOAD_ALERT",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "24c56a6e.a801be"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5c204382.3adafc",
+        "type": "image viewer",
+        "z": "57d6a2d8.031304",
+        "name": "croped img",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "active": false,
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "98560d39.d0227",
+                "d5d4a9ff.c12508"
+            ]
+        ]
+    },
+    {
+        "id": "a62a0330.9046a",
+        "type": "change",
+        "z": "4b88ec7e.99ce7c",
+        "name": "store image for debug",
+        "rules": [
+            {
+                "t": "set",
+                "p": "_image",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "d7e45c46.94ce8"
+            ]
+        ]
+    },
+    {
+        "id": "9b3fa793.af6ef8",
+        "type": "function",
+        "z": "57d6a2d8.031304",
+        "name": "compose tesseract command",
+        "func": "msg.payload = ' --dpi 300 --psm 6 ' + msg.filename +' stdout' ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 660,
+        "wires": [
+            [
+                "7a936139.e84bc8"
+            ]
+        ]
+    },
+    {
+        "id": "98560d39.d0227",
+        "type": "function",
+        "z": "57d6a2d8.031304",
+        "name": "'Pictures/uriya/croped/' + filename + '.jpg'",
+        "func": "msg.filename = '/tmp/'+ Date.now() +'.jpg';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 440,
+        "wires": [
+            [
+                "70d5af34.73d668"
+            ]
+        ]
+    },
+    {
+        "id": "70d5af34.73d668",
+        "type": "file",
+        "z": "57d6a2d8.031304",
+        "name": "write file",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 960,
+        "y": 440,
+        "wires": [
+            [
+                "9b3fa793.af6ef8"
+            ]
+        ]
+    },
+    {
+        "id": "7a936139.e84bc8",
+        "type": "exec",
+        "z": "57d6a2d8.031304",
+        "command": "tesseract",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "9c854a0f.da1e78",
+                "c0ef6685.8741d8",
+                "2201440f.db73ac",
+                "a6ef4ca3.2ec42"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9c854a0f.da1e78",
+        "type": "function",
+        "z": "57d6a2d8.031304",
+        "name": "buffer toString & remove newline",
+        "func": "var out2 = {payload :  msg.payload.toString() };\n\nmsg.payload = msg.payload.toString();\nmsg.payload = msg.payload.replace(/\\n/g,\" \").trim();\nmsg.payload = parseFloat(msg.payload);\nif (isNaN(msg.payload)) {\n    msg.payload = true;\n  }\n  \nreturn [msg,out2];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 660,
+        "wires": [
+            [
+                "fade7945.d8bda"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "f16a932b.eacc6",
+        "type": "comment",
+        "z": "57d6a2d8.031304",
+        "name": "focus on target text to be ocr",
+        "info": "",
+        "x": 160,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e9a2b8a9.bbd42",
+        "type": "comment",
+        "z": "57d6a2d8.031304",
+        "name": "ocr the image",
+        "info": "",
+        "x": 110,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "1f122910.9a69ef",
+        "type": "inject",
+        "z": "7bb680d6.d6c6c",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "2cd1e862.259048"
+            ]
+        ]
+    },
+    {
+        "id": "2cd1e862.259048",
+        "type": "http request",
+        "z": "7bb680d6.d6c6c",
+        "name": "get img fro ip cam",
+        "method": "GET",
+        "ret": "bin",
+        "paytoqs": "ignore",
+        "url": "http://192.168.1.208/picture/1/current/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "5c97cac6.12c27c"
+            ]
+        ]
+    },
+    {
+        "id": "4aa72a9d.3d07b4",
+        "type": "readdir",
+        "z": "7bb680d6.d6c6c",
+        "name": "Pictures/uriya/frames/",
+        "dir": "Pictures/uriya/frames/",
+        "as": "multi",
+        "recursive": false,
+        "outproperty": "payload",
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "5c97cac6.12c27c"
+            ]
+        ]
+    },
+    {
+        "id": "fa871c84.ab29b8",
+        "type": "inject",
+        "z": "7bb680d6.d6c6c",
+        "name": "inject video frames",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "4aa72a9d.3d07b4"
+            ]
+        ]
+    },
+    {
+        "id": "5c95efc5.764bf8",
+        "type": "comment",
+        "z": "7bb680d6.d6c6c",
+        "name": "get image from file or camera",
+        "info": "",
+        "x": 180,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c0ef6685.8741d8",
+        "type": "simple-queue",
+        "z": "57d6a2d8.031304",
+        "name": "",
+        "count": "1",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "4db93e61.415e08",
+                "961497c2.40c158",
+                "b394dbc2.05774"
+            ]
+        ]
+    },
+    {
+        "id": "5c97cac6.12c27c",
+        "type": "link out",
+        "z": "7bb680d6.d6c6c",
+        "name": "out going img",
+        "links": [
+            "8f7f6d.1d9fe89"
+        ],
+        "x": 755,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "8f7f6d.1d9fe89",
+        "type": "link in",
+        "z": "57d6a2d8.031304",
+        "name": "incoming img",
+        "links": [
+            "5c97cac6.12c27c"
+        ],
+        "x": 155,
+        "y": 240,
+        "wires": [
+            [
+                "c0ef6685.8741d8"
+            ]
+        ]
+    },
+    {
+        "id": "fade7945.d8bda",
+        "type": "link out",
+        "z": "57d6a2d8.031304",
+        "name": "",
+        "links": [
+            "dee512a9.2b4318"
+        ],
+        "x": 875,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b5de9303.7e65b",
+        "type": "ui_gauge",
+        "z": "323f1b26.62b204",
+        "name": "UI -> display on gauge",
+        "group": "5bce848c.49841c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "A",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "6",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 460,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "da8ef8bc.820c68",
+        "type": "subflow:6d72e121.ff3af",
+        "z": "323f1b26.62b204",
+        "name": "UI -> display on chart",
+        "env": [],
+        "x": 460,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a1d4184a.273d8",
+        "type": "debug",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "285d0ad9.53b236",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "323f1b26.62b204",
+        "name": "alert on Whatsapp",
+        "account": "89d013d1.7acd18",
+        "text": "payload",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 930,
+        "y": 380,
+        "wires": [
+            [
+                "f8f667a.768a598"
+            ]
+        ]
+    },
+    {
+        "id": "b2e77bb8.165b68",
+        "type": "switch",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "SL_MAX_LOAD",
+                "vt": "global"
+            },
+            {
+                "t": "lte",
+                "v": "SL_MAX_LOAD",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "2beb8e5d.23ed2a"
+            ],
+            [
+                "90a77c0f.b93238"
+            ]
+        ]
+    },
+    {
+        "id": "f88538c4.2842f",
+        "type": "function",
+        "z": "323f1b26.62b204",
+        "name": "format msg",
+        "func": "msg.payload = 'Spindle Load = ' + msg.payload ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 380,
+        "wires": [
+            [
+                "285d0ad9.53b236",
+                "90a77c0f.b93238"
+            ]
+        ]
+    },
+    {
+        "id": "2beb8e5d.23ed2a",
+        "type": "change",
+        "z": "323f1b26.62b204",
+        "name": "set ALERT = TRUE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ALERT",
+                "pt": "global",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "90a77c0f.b93238",
+        "type": "change",
+        "z": "323f1b26.62b204",
+        "name": "set ALERT = FALSE",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ALERT",
+                "pt": "global",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9be97e7e.46ec3",
+        "type": "switch",
+        "z": "323f1b26.62b204",
+        "name": "ALERT ? TRUE",
+        "property": "ALERT",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "6a94153.dc4d1ec"
+            ]
+        ]
+    },
+    {
+        "id": "6a94153.dc4d1ec",
+        "type": "switch",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "SL_MAX_LOAD",
+                "vt": "global"
+            },
+            {
+                "t": "lt",
+                "v": "SL_MAX_LOAD",
+                "vt": "global"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "f88538c4.2842f",
+                "286286bd.b17cb2",
+                "c197fa79.30079"
+            ],
+            [
+                "90a77c0f.b93238"
+            ]
+        ]
+    },
+    {
+        "id": "286286bd.b17cb2",
+        "type": "debug",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "_image",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4b2a6ef2.d1611",
+        "type": "image viewer",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "width": 160,
+        "data": "payload",
+        "dataType": "msg",
+        "active": true,
+        "x": 710,
+        "y": 60,
+        "wires": [
+            [
+                "b7f48cf7.f5a938"
+            ]
+        ]
+    },
+    {
+        "id": "c197fa79.30079",
+        "type": "change",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "_image",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 20,
+        "wires": [
+            [
+                "4b2a6ef2.d1611"
+            ]
+        ]
+    },
+    {
+        "id": "88c1de55.61cdf",
+        "type": "switch",
+        "z": "323f1b26.62b204",
+        "name": "num only",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "null",
+                "vt": "num"
+            },
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 100,
+        "y": 180,
+        "wires": [
+            [],
+            [],
+            [
+                "a1d4184a.273d8",
+                "b5de9303.7e65b",
+                "da8ef8bc.820c68",
+                "9be97e7e.46ec3",
+                "b2e77bb8.165b68"
+            ]
+        ]
+    },
+    {
+        "id": "15f51bd4.f277ac",
+        "type": "ui_template",
+        "z": "323f1b26.62b204",
+        "group": "11af806b.6653b",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "\n\n<img width=\"100%\" height=\"auto\" src=\"{{msg.payload}}\"/>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 720,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7f48cf7.f5a938",
+        "type": "jimp-image",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "b64",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "15f51bd4.f277ac"
+            ]
+        ]
+    },
+    {
+        "id": "4af07e2a.76d83",
+        "type": "inject",
+        "z": "323f1b26.62b204",
+        "name": "test SL load  = 10",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 160,
+        "y": 540,
+        "wires": [
+            [
+                "b2e77bb8.165b68",
+                "f8f667a.768a598",
+                "9be97e7e.46ec3"
+            ]
+        ]
+    },
+    {
+        "id": "f8f667a.768a598",
+        "type": "debug",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "aaf3f8f3.cf7f48",
+        "type": "change",
+        "z": "323f1b26.62b204",
+        "name": "set SL_MAX_LOAD",
+        "rules": [
+            {
+                "t": "set",
+                "p": "SL_MAX_LOAD",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5dde4c1d.25f924",
+        "type": "ui_numeric",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "label": "UI -> set alert value",
+        "tooltip": "",
+        "group": "5bce848c.49841c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": true,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "step": 1,
+        "x": 1190,
+        "y": 140,
+        "wires": [
+            [
+                "aaf3f8f3.cf7f48"
+            ]
+        ]
+    },
+    {
+        "id": "dee512a9.2b4318",
+        "type": "link in",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "links": [
+            "fade7945.d8bda"
+        ],
+        "x": 135,
+        "y": 40,
+        "wires": [
+            [
+                "88c1de55.61cdf",
+                "cd155441.87d5f8",
+                "9205859a.563dc"
+            ]
+        ]
+    },
+    {
+        "id": "2201440f.db73ac",
+        "type": "ui_text",
+        "z": "57d6a2d8.031304",
+        "group": "11af806b.6653b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "ocr result",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 520,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "57cb6aef.f6d634",
+        "type": "ui_template",
+        "z": "57d6a2d8.031304",
+        "group": "11af806b.6653b",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<img width=\"100%\" height=\"auto\" src=\"{{msg.payload}}\"/>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 760,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5d4a9ff.c12508",
+        "type": "jimp-image",
+        "z": "57d6a2d8.031304",
+        "name": "base64",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "b64",
+        "parameter1": "",
+        "parameter1Type": "msg",
+        "parameter2": "",
+        "parameter2Type": "msg",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 0,
+        "jimpFunction": "none",
+        "selectedJimpFunction": {
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
+        },
+        "x": 620,
+        "y": 340,
+        "wires": [
+            [
+                "57cb6aef.f6d634"
+            ]
+        ]
+    },
+    {
+        "id": "a6ef4ca3.2ec42",
+        "type": "ui_text",
+        "z": "57d6a2d8.031304",
+        "group": "11af806b.6653b",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.filename}}",
+        "layout": "row-spread",
+        "x": 510,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "cd155441.87d5f8",
+        "type": "ui_template",
+        "z": "323f1b26.62b204",
+        "group": "11af806b.6653b",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div >alert : {{msg._alert}}</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 420,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9205859a.563dc",
+        "type": "debug",
+        "z": "323f1b26.62b204",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "961497c2.40c158",
+        "type": "ui_template",
+        "z": "57d6a2d8.031304",
+        "group": "11af806b.6653b",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 620,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b394dbc2.05774",
+        "type": "debug",
+        "z": "57d6a2d8.031304",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 280,
+        "wires": []
     }
 ]

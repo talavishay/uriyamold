@@ -2,7 +2,13 @@
     "name": "uriyamold",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-simple-queue": "1.0.2",
+        "node-red-contrib-image-tools": "2.0.1",
+        "node-red-contrib-readdir": "1.0.1",
+        "node-red-contrib-whatsapp-cmb": "1.0.2",
+        "node-red-dashboard": "2.29.3"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",
