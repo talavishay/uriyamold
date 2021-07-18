@@ -157,7 +157,7 @@
                 "default": "#097479",
                 "baseColor": "#7f7f7f",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false,
+                "edited": true,
                 "reset": false
             },
             "customTheme": {
@@ -339,11 +339,11 @@
         "data": "payload",
         "dataType": "msg",
         "ret": "buf",
-        "parameter1": "430",
+        "parameter1": "390",
         "parameter1Type": "num",
         "parameter2": "90",
         "parameter2Type": "num",
-        "parameter3": "155",
+        "parameter3": "195",
         "parameter3Type": "num",
         "parameter4": "60",
         "parameter4Type": "num",
