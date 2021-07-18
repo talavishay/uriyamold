@@ -145,7 +145,7 @@
         "id": "a8577957.943fc",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-dark",
             "lightTheme": {
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
@@ -155,9 +155,10 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#097479",
+                "baseColor": "#7f7f7f",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": false,
+                "reset": false
             },
             "customTheme": {
                 "name": "Untitled Theme 1",
@@ -167,16 +168,16 @@
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "default": "#097479",
+                    "value": "#7f7f7f",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
+                    "value": "#7f7f7f",
                     "edited": false
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
+                    "value": "#111111",
                     "edited": false
                 },
                 "page-sidebar-backgroundColor": {
@@ -184,27 +185,27 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#1bbfff",
+                    "value": "#a5a5a5",
                     "edited": false
                 },
                 "group-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#555555",
                     "edited": false
                 },
                 "group-backgroundColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "widget-textColor": {
-                    "value": "#111111",
+                    "value": "#eeeeee",
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
+                    "value": "#7f7f7f",
                     "edited": false
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
+                    "value": "#333333",
                     "edited": false
                 },
                 "base-font": {
@@ -220,8 +221,8 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
+            "name": "uriyamold",
+            "hideToolbar": "true",
             "allowSwipe": "false",
             "lockMenu": "false",
             "allowTempTheme": "true",
@@ -230,9 +231,9 @@
                 "sx": 48,
                 "sy": 48,
                 "gx": 6,
-                "gy": 6,
+                "gy": 2,
                 "cx": 6,
-                "cy": 6,
+                "cy": 0,
                 "px": 0,
                 "py": 0
             }
@@ -295,6 +296,16 @@
         "id": "11af806b.6653b",
         "type": "ui_group",
         "name": "current image",
+        "tab": "6d74aab0.22c664",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "e114433d.b753b8",
+        "type": "ui_group",
+        "name": "alerts",
         "tab": "6d74aab0.22c664",
         "order": 2,
         "disp": true,
@@ -1184,7 +1195,7 @@
                 "9c854a0f.da1e78",
                 "c0ef6685.8741d8",
                 "2201440f.db73ac",
-                "a6ef4ca3.2ec42"
+                "db39909e.8d574"
             ],
             [],
             []
@@ -1308,7 +1319,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "120",
+        "repeat": "96",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -1343,9 +1354,7 @@
         "y": 240,
         "wires": [
             [
-                "4db93e61.415e08",
-                "961497c2.40c158",
-                "b394dbc2.05774"
+                "4db93e61.415e08"
             ]
         ]
     },
@@ -1612,30 +1621,12 @@
         "wires": [
             [
                 "f88538c4.2842f",
-                "286286bd.b17cb2",
                 "c197fa79.30079"
             ],
             [
                 "90a77c0f.b93238"
             ]
         ]
-    },
-    {
-        "id": "286286bd.b17cb2",
-        "type": "debug",
-        "z": "323f1b26.62b204",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "_image",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 320,
-        "wires": []
     },
     {
         "id": "4b2a6ef2.d1611",
@@ -1722,20 +1713,23 @@
         "id": "15f51bd4.f277ac",
         "type": "ui_template",
         "z": "323f1b26.62b204",
-        "group": "11af806b.6653b",
-        "name": "",
-        "order": 0,
+        "group": "e114433d.b753b8",
+        "name": "image",
+        "order": 1,
         "width": 0,
         "height": 0,
-        "format": "\n\n<img width=\"100%\" height=\"auto\" src=\"{{msg.payload}}\"/>",
+        "format": "<img width=\"100%\" height=\"auto\" src=\"{{msg.payload}}\"/>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "x": 720,
-        "y": 260,
+        "x": 830,
+        "y": 220,
         "wires": [
-            []
+            [
+                "9758c044.e753c",
+                "b1b79ab4.7e553"
+            ]
         ]
     },
     {
@@ -1888,7 +1882,6 @@
         "wires": [
             [
                 "88c1de55.61cdf",
-                "cd155441.87d5f8",
                 "9205859a.563dc"
             ]
         ]
@@ -1898,14 +1891,14 @@
         "type": "ui_text",
         "z": "57d6a2d8.031304",
         "group": "11af806b.6653b",
-        "order": 6,
+        "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "ocr result",
+        "label": "ocr result :",
         "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 520,
+        "layout": "row-center",
+        "x": 530,
         "y": 740,
         "wires": []
     },
@@ -1915,7 +1908,7 @@
         "z": "57d6a2d8.031304",
         "group": "11af806b.6653b",
         "name": "",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "format": "<img width=\"100%\" height=\"auto\" src=\"{{msg.payload}}\"/>",
@@ -1972,82 +1965,9 @@
         ]
     },
     {
-        "id": "a6ef4ca3.2ec42",
-        "type": "ui_text",
-        "z": "57d6a2d8.031304",
-        "group": "11af806b.6653b",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.filename}}",
-        "layout": "row-spread",
-        "x": 510,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "cd155441.87d5f8",
-        "type": "ui_template",
-        "z": "323f1b26.62b204",
-        "group": "11af806b.6653b",
-        "name": "",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "format": "<div >alert : {{msg._alert}}</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 420,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "9205859a.563dc",
         "type": "debug",
         "z": "323f1b26.62b204",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 430,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "961497c2.40c158",
-        "type": "ui_template",
-        "z": "57d6a2d8.031304",
-        "group": "11af806b.6653b",
-        "name": "",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "x": 620,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b394dbc2.05774",
-        "type": "debug",
-        "z": "57d6a2d8.031304",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -2057,8 +1977,56 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 280,
+        "x": 370,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "db39909e.8d574",
+        "type": "ui_text",
+        "z": "57d6a2d8.031304",
+        "group": "11af806b.6653b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "source:",
+        "format": "{{msg._image}}",
+        "layout": "col-center",
+        "x": 510,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "b1b79ab4.7e553",
+        "type": "ui_text",
+        "z": "323f1b26.62b204",
+        "group": "e114433d.b753b8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "source",
+        "format": "{{msg._image}}",
+        "layout": "col-center",
+        "x": 830,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9758c044.e753c",
+        "type": "ui_text",
+        "z": "323f1b26.62b204",
+        "group": "e114433d.b753b8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "target ",
+        "format": "{{msg.filename}}",
+        "layout": "col-center",
+        "x": 830,
+        "y": 260,
         "wires": []
     }
 ]
